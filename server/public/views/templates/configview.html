@@ -1,0 +1,22 @@
+<div class="row" ng-model="settings">
+  <h1>Settings</h1>
+  <p>Choose a new color</p>
+
+  <form>
+    <select ng-options="item for item in settings.availableColors " ng-model="settings.newColor.color">
+      <option ng-value="item" ></option>
+    </select>
+    <input type="submit" ng-click="settings.addNewColor(settings.newColor)">
+  </form>
+
+
+  <br />
+  <p>remove a color</p>
+  <form>
+    <select ng-options="item for item in settings.currentColors " ng-model="settings.removeColor.color">
+      <option ng-value="item"></option>
+    </select>
+    <input type="submit" ng-click="settings.removeOldColor(settings.removeColor)">
+  </form>
+
+</div>

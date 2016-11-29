@@ -1,0 +1,12 @@
+<div class="row" id="gameview" ng-model="game">
+  <h1>{{game.colorPrompt}}</h1>
+  <h4>Score: {{game.score}}</h4>
+  <h4>High Score: {{game.highScore}}</h4>
+
+  <h3 ng-if="game.messageText != ''" class="alert alert-warning">{{game.messageText}}</h3>
+
+  <div id="button-container">
+    <div class="color-button" ng-repeat="color in game.colors" ng-style="{background: color}" ng-click="game.handleInput(color)"></div>
+  </div>
+
+</div>

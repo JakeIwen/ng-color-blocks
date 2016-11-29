@@ -1,0 +1,29 @@
+{
+  "name": "ng-color-blocks",
+  "version": "1.0.0",
+  "description": "color block game in angular",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "nodemon server/app.js",
+    "start": "node server/app.js"
+  },
+  "author": "Kris Szafranski",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-route": "^1.5.9",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "pg": "^6.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakeIwen/ng-color-blocks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JakeIwen/ng-color-blocks/issues"
+  },
+  "homepage": "https://github.com/JakeIwen/ng-color-blocks#readme"
+}
