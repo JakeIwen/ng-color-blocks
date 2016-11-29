@@ -6,17 +6,19 @@ var self = this;
 self.colors = DataFactory.colors;
 self.score = 0;
 self.highScore = 0;
+var tmp = 0;
 
 console.log('colors from factory', self.colors);
 // start game
-init();
 
 // resets game to the starting state
-function init() {
+self.init = function() {
   self.messageText = "";
   self.currentColor = self.colors[randomNumber(0, self.colors.length - 1)];
   self.colorPrompt = 'Can you find the ' + self.currentColor + ' block?'
 }
+
+self.init();
 
 // click handler for guessing colors
 self.handleInput = function(clickedColor) {
@@ -26,9 +28,9 @@ self.handleInput = function(clickedColor) {
     if(self.score > self.highScore) {
       self.highScore++;
     }
-    init();
+    self.init();
   } else {
-    self.messageText = 'Oh no! You guessed wrong!';
+    self.messageText = 'Oh no! You guessed wrong! Click here to start over.';
     self.score = 0;
   }
 }
